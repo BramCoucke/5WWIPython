@@ -24,6 +24,6 @@ eurocent = eurocent % 2
 aantal_muntstukken += (eurocent // 1)
 eurocent = eurocent % 1
 
-print(aantal_muntstukken, eurocent)
+print(eurocent,'cent kan je om wisselen in',aantal_muntstukken,'muntstukken')
 
 #uitvoer
