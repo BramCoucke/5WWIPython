@@ -3,11 +3,9 @@ antwoord2 = input('man duwen: ')
 
 if antwoord1 == 'ja' and antwoord2 == 'ja':
     uitvoer= 2
-elif antwoord1 == 'ja' and antwoord2 == 'nee':
+elif antwoord1 != antwoord2:
     uitvoer= 1
-elif antwoord1 == 'nee' and antwoord2 == 'ja':
-    uitvoer= 1
-elif antwoord1 == 'nee' and antwoord2 == 'nee':
+else:
     uitvoer= 5
 
 print(uitvoer)
