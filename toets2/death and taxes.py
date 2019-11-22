@@ -11,7 +11,6 @@ netto_belastbaar_inkomen = bruto_jaarsalaris - waarde2
 
 if bruto_jaarsalaris <= 13250:
     waarde3 = 0
-
 elif bruto_jaarsalaris <= 23390:
     waarde3 = ((13250-8860)/4)
 elif bruto_jaarsalaris <= 40480:

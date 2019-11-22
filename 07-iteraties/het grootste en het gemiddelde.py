@@ -1,6 +1,6 @@
 #invoer
 aantal_getallen = int(input('aantal getallen: '))
-getal1= int(input('geefgetal: '))
+getal1 = int(input('geefgetal: '))
 maximum = getal1
 som = getal1
 
