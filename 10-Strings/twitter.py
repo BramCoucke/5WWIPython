@@ -1,0 +1,1 @@
+zin = input('geef zin: ')
