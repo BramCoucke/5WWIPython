@@ -2,19 +2,29 @@ def is_letter(t):
     return ord('A') <= ord(t) <= ord('z')
 
 
-def roteer(letter ,plaatsen):
-    #volgnummer in het alfabet bepaald van de gegeven letter
-    volgnummer_letter = min(ord(letter) % ord('a'), ord(letter) % ord('A'))
-    # volgnummer in alfabet van nieuwe letter
-    nieuw_volgnummer = (volgnummer_letter + plaatsen) % 26
-    # offset
-    offset = nieuw_volgnummer - volgnummer_letter
-    return chr(ord(letter) + offset)
+def roteer_letter(letter, verschuiving):
+    if ord('a') <= ord(letter) <= ord('z'):
+        if ord(letter) + verschuiving > ord('z'):
+            letter_nieuw = chr(ord('a') + (verschuiving - (ord('z') - ord(letter) + 1)))
+        else:
+            letter_nieuw = chr(ord(letter) + verschuiving)
+        return letter_nieuw
+    elif ord('A') <= ord(letter) <= ord('Z'):
+        if ord(letter) + verschuiving > ord('Z'):
+            letter_nieuw = chr(ord('A') + (verschuiving - (ord('Z') - ord(letter) + 1)))
+        else:
+            letter_nieuw = chr(ord(letter) + verschuiving)
+        return letter_nieuw
 
 
-def versleutel(woord, n):
-    rotatie =''
-
+def versleutel(tekst, caesarcijfer):
+    nieuwe_tekst = ''
+    for letter_a in tekst:
+        if ord('a') <= ord(letter_a) <= ord('z') or ord('A') <= ord(letter_a) <= ord('Z'):
+            nieuwe_tekst += roteer_letter(letter_a, caesarcijfer)
+        else:
+            nieuwe_tekst += letter_a
+    return nieuwe_tekst
 
 
 
