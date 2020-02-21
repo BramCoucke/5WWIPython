@@ -4,5 +4,3 @@ def yiq(kleur):
     q = kleur[0] * 0.211 + kleur[1] * (-0.523) + kleur[2] * 0.312
     return(y, i, q)
 
-
-print(yiq(255,255,255))
